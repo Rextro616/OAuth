@@ -18,13 +18,16 @@ dependencies {
     implementation 'io.quarkus:quarkus-jdbc-mysql'
     implementation 'org.mindrot:jbcrypt:0.4' // Para hash de contraseñas
     implementation 'io.quarkus:quarkus-resteasy-jsonb'
-
-    implementation("io.quarkus:quarkus-smallrye-openapi")
-    implementation("io.quarkus:quarkus-swagger-ui")
-
+    // Cloudinary para subir imágenes
+    implementation 'com.cloudinary:cloudinary-http44:1.36.0'
     // Adding Lombok dependencies
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation("io.quarkus:quarkus-smallrye-openapi")
+    implementation("io.quarkus:quarkus-swagger-ui")
+    implementation 'io.quarkus:quarkus-resteasy-multipart'
+    // Firebase Admin SDK para notificaciones push
+    implementation 'com.google.firebase:firebase-admin:9.2.0'
 
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'

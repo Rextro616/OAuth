@@ -19,4 +19,7 @@ public class LoginDTO {
     @NotBlank(message = "La contraseña es obligatoria")
     @Size(min = 6, message = "La contraseña debe tener al menos 6 caracteres")
     public String password;
+
+    // Token FCM para notificaciones push (opcional)
+    public String fcmToken;
 }
